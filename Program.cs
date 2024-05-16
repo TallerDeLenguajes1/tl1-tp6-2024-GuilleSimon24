@@ -51,9 +51,14 @@ if (anda)
         double raiz;
         raiz = Math.Sqrt(numReal);
         Console.WriteLine("La raiz cuadrada es: "+raiz);
-        double coseno = Math.Sin(numReal);
-        string cadenaCos = coseno.ToString("F2");
-        Console.WriteLine("El coseno es: "+cadenaCos);
+        double seno = Math.Sin(numReal);
+        double Coseno = Math.Cos(numReal);
+        string cadenaSeno = seno.ToString("F2");
+        string cadenaCoseno = Coseno.ToString("F2");
+        Console.WriteLine("El Seno es: "+cadenaSeno);
+        Console.WriteLine("El Coseno es: "+cadenaCoseno);
+        string cadenaReal = numReal.ToString("F2");
+        Console.WriteLine("La parte entera del numero "+numReal+" es: "+numero);
     }
     
 }   
