@@ -59,8 +59,34 @@ if (anda)
         Console.WriteLine("El Coseno es: "+cadenaCoseno);
         string cadenaReal = numReal.ToString("F2");
         Console.WriteLine("La parte entera del numero "+numReal+" es: "+numero);
+
+
     }
     
+}else
+{
+    Console.WriteLine("Ingreso un numero invalido");
 }   
 
+Console.WriteLine("Ahora ingrese dos numeros distintos");
+cadena = Console.ReadLine();
+int num1;
+bool andaNum1 = int.TryParse(cadena, out num1);
+Console.WriteLine("Ingrese el segundo numero: ");
+cadena = Console.ReadLine();
+int num2;
+bool andaNum2 = int.TryParse(cadena, out num2);
+if (andaNum1 && andaNum2 && (num1 != num2))
+{
+    if (num1 > num2)
+    {
+        Console.WriteLine("El numero "+num1+" es mayor que el numero "+num2);
+    }else
+    {
+        Console.WriteLine("El numero "+num2+" es mayor que el numero "+num1);
+    }
 
+}else
+{
+    Console.WriteLine("Ingreso numeros invalidos");
+}
