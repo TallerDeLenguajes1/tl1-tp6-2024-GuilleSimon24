@@ -9,7 +9,7 @@ Console.WriteLine("valor de b:"+b);
 
 //Ejercicio 1
 
-string cadena;
+/*string cadena;
 cadena = Console.ReadLine();
 int numero;
 bool resultado = int.TryParse(cadena, out numero);
@@ -27,8 +27,35 @@ if (resultado)
         }
     }
 Console.WriteLine("Valor del invertido: "+invertido);    
-}
+}*/
 
 
+
+//Ejercicio 3
+
+Console.WriteLine("Ingrese un numero: ");
+string cadena = Console.ReadLine();
+
+int numero;
+bool anda = int.TryParse(cadena, out numero);
+
+if (anda)
+{
+    Console.WriteLine("El valor absoluto es: "+numero+" y -"+numero);
+    int cuadrado = numero*numero;
+    Console.WriteLine("El cuadrado es: "+cuadrado);
+    double numReal;
+    bool andaReal = double.TryParse(cadena, out numReal); 
+    if (andaReal)
+    {
+        double raiz;
+        raiz = Math.Sqrt(numReal);
+        Console.WriteLine("La raiz cuadrada es: "+raiz);
+        double coseno = Math.Sin(numReal);
+        string cadenaCos = coseno.ToString("F2");
+        Console.WriteLine("El coseno es: "+cadenaCos);
+    }
+    
+}   
 
 
