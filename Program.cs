@@ -9,7 +9,7 @@ Console.WriteLine("valor de b:"+b);
 
 //Ejercicio 1
 
-/*string cadena;
+string cadena;
 cadena = Console.ReadLine();
 int numero;
 bool resultado = int.TryParse(cadena, out numero);
@@ -27,17 +27,17 @@ if (resultado)
         }
     }
 Console.WriteLine("Valor del invertido: "+invertido);    
-}*/
+}
 
 Console.WriteLine("Elija una opcion");
 Console.WriteLine("1 sumar");
 Console.WriteLine("2 restar");
 Console.WriteLine("3 dividir");
 Console.WriteLine("4 multiplicar");
-string cadena = Console.ReadLine();
+cadena = Console.ReadLine();
 
 int opcion;
-bool resultado = int.TryParse(cadena, out opcion);
+resultado = int.TryParse(cadena, out opcion);
 
 while (opcion != 0)
 {
@@ -130,16 +130,16 @@ resultado = int.TryParse(cadena, out opcion);
 }
 
 
-}*/
+
 
 
 
 //Ejercicio 3
 
 Console.WriteLine("Ingrese un numero: ");
-string cadena = Console.ReadLine();
+cadena = Console.ReadLine();
 
-int numero;
+
 bool anda = int.TryParse(cadena, out numero);
 
 if (anda)
