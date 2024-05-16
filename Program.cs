@@ -39,15 +39,17 @@ string cadena = Console.ReadLine();
 int opcion;
 bool resultado = int.TryParse(cadena, out opcion);
 
-if (resultado)
+while (opcion != 0)
 {
-    bool resulta2;
-    bool resulta3;
-    int res;
-    int numeroA;
-    int numeroB;
-    switch (opcion)
+    if (resultado)
     {
+        bool resulta2;
+        bool resulta3;
+        int res;
+        int numeroA;
+        int numeroB;
+        switch (opcion)
+        {
         case 1:
             Console.WriteLine("Ingrese el numero 1");
             cadena = Console.ReadLine();
@@ -110,5 +112,20 @@ if (resultado)
 
         break;
         
+        }
     }
+Console.WriteLine("Desea finalizar? 0 Para si. Sino:");
+    
+Console.WriteLine("Elija una opcion");
+Console.WriteLine("1 sumar");
+Console.WriteLine("2 restar");
+Console.WriteLine("3 dividir");
+Console.WriteLine("4 multiplicar");
+
+cadena = Console.ReadLine();
+
+
+resultado = int.TryParse(cadena, out opcion);
+    
 }
+
