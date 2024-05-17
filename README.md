@@ -9,7 +9,7 @@ El @ hace que las cadenas que se guardan en un tipo string ignoren las secuencia
 Ejemplo:
   String cadena = @"Esta es la direccion C:\documents\Konami\ProEvolutionSoccer\PES2013"
 
-En el caso del $, se usa para interpolar cadenas, lo que permite hacer es facilitar el concatenamiento dentro de las cadenas usando llaves {} para llamar valores dentro de la cadena sin tener que concatenar con ++
+En el caso del \$, se usa para interpolar cadenas, lo que permite hacer es facilitar el concatenamiento dentro de las cadenas usando llaves {} para llamar valores dentro de la cadena sin tener que concatenar con ++
 Ejemplo:
   String cadenaConcatenada = "Hola me llamo "+nombre+" y tengo "+edad+" años";
-  String cadenaInterpolada = $"Hola me llamo {nombre} y tengo {edad} años";
+  String cadenaInterpolada = \$"Hola me llamo {nombre} y tengo {edad} años";
