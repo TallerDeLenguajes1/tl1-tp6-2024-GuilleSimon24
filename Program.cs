@@ -8,7 +8,7 @@ Console.WriteLine("valor de a:"+a);
 Console.WriteLine("valor de b:"+b);
 
 //Ejercicio 1
-
+/*
 string cadena;
 cadena = Console.ReadLine();
 int numero;
@@ -27,7 +27,37 @@ if (resultado)
         }
     }
 Console.WriteLine("Valor del invertido: "+invertido);    
+}*/
+
+
+//Ejercicio 4
+
+string cadena;
+cadena = Console.ReadLine();
+int longitud = cadena.Length;
+Console.WriteLine("Longitud: "+longitud);
+string cadena2;
+cadena2 = Console.ReadLine();
+string resultadoSuma = cadena + " " + cadena2;
+Console.WriteLine("Resultado de la concatenacion: "+resultadoSuma);
+
+string subCadena = resultadoSuma.Substring(0, 1);
+Console.WriteLine(subCadena);
+
+int num1 = 5;
+int num2 = 7;
+string cadenaNUM1 = num1.ToString();
+string cadenaNUM2 = num2.ToString();
+int resultado = num1+num2;
+string cadenaResultado = resultado.ToString();
+Console.WriteLine("La suma de "+cadenaNUM1+" y "+cadenaNUM2+" es: "+cadenaResultado);
+
+foreach (char buscar in resultadoSuma)
+{
+    Console.WriteLine(buscar);
 }
+
+// No estaria encontrando la solucion a Buscar la ocurrencia de una palabra determinada en la cadena ingresada
 
 
 
