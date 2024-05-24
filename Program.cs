@@ -40,7 +40,7 @@ string cadena2;
 cadena2 = Console.ReadLine();
 string resultadoSuma = cadena + " " + cadena2;
 Console.WriteLine("Resultado de la concatenacion: "+resultadoSuma);
-
+/*
 string subCadena = resultadoSuma.Substring(0, 1);
 Console.WriteLine(subCadena);
 
@@ -55,10 +55,20 @@ Console.WriteLine("La suma de "+cadenaNUM1+" y "+cadenaNUM2+" es: "+cadenaResult
 foreach (char buscar in resultadoSuma)
 {
     Console.WriteLine(buscar);
+}*/
+
+Console.WriteLine("Ingrese la cadena a buscar");
+string buscar = Console.ReadLine();
+
+int indice = resultadoSuma.IndexOf(buscar);
+
+if(indice != -1)
+{
+    string buscada = resultadoSuma.Substring(indice, buscar.Length);
+    Console.WriteLine("La cadena \""+buscada+"\" fue encontrada");
 }
-
-// No estaria encontrando la solucion a Buscar la ocurrencia de una palabra determinada en la cadena ingresada
-
-
-
+else
+{
+    Console.WriteLine("No se encontro la cadena");
+}
 
