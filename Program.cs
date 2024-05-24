@@ -55,7 +55,7 @@ Console.WriteLine("La suma de "+cadenaNUM1+" y "+cadenaNUM2+" es: "+cadenaResult
 foreach (char buscar in resultadoSuma)
 {
     Console.WriteLine(buscar);
-}*/
+}
 
 Console.WriteLine("Ingrese la cadena a buscar");
 string buscar = Console.ReadLine();
@@ -70,5 +70,11 @@ if(indice != -1)
 else
 {
     Console.WriteLine("No se encontro la cadena");
-}
+}*/
+
+string cadenaMayus = resultadoSuma.ToUpper();
+Console.WriteLine(cadenaMayus);
+
+string cadenaMinus = resultadoSuma.ToLower();
+Console.WriteLine(cadenaMinus);
 
