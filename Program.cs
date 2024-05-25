@@ -31,7 +31,7 @@ Console.WriteLine("Valor del invertido: "+invertido);
 
 
 //Ejercicio 4
-
+/*
 string cadena;
 cadena = Console.ReadLine();
 int longitud = cadena.Length;
@@ -39,7 +39,7 @@ Console.WriteLine("Longitud: "+longitud);
 string cadena2;
 cadena2 = Console.ReadLine();
 string resultadoSuma = cadena + " " + cadena2;
-Console.WriteLine("Resultado de la concatenacion: "+resultadoSuma);
+Console.WriteLine("Resultado de la concatenacion: "+resultadoSuma);*/
 /*
 string subCadena = resultadoSuma.Substring(0, 1);
 Console.WriteLine(subCadena);
@@ -70,11 +70,93 @@ if(indice != -1)
 else
 {
     Console.WriteLine("No se encontro la cadena");
-}*/
+}
 
 string cadenaMayus = resultadoSuma.ToUpper();
 Console.WriteLine(cadenaMayus);
 
 string cadenaMinus = resultadoSuma.ToLower();
 Console.WriteLine(cadenaMinus);
+*/
+
+
+string cadenaMate = Console.ReadLine();
+
+
+// Eliminar espacios en blanco
+        cadenaMate = cadenaMate.Replace(" ", string.Empty);
+
+        // Variables para almacenar los operandos y el operador
+        double num1, num2;
+        char operador;
+
+        // Buscar el operador en la expresión
+        int operadorIndex = -1;
+        if (cadenaMate.Contains("+"))
+        {
+            operadorIndex = cadenaMate.IndexOf("+");
+            operador = '+';
+        }
+        else if (cadenaMate.Contains("-"))
+        {
+            operadorIndex = cadenaMate.IndexOf("-");
+            operador = '-';
+        }
+        else if (cadenaMate.Contains("*"))
+        {
+            operadorIndex = cadenaMate.IndexOf("*");
+            operador = '*';
+        }
+        else if (cadenaMate.Contains("/"))
+        {
+            operadorIndex = cadenaMate.IndexOf("/");
+            operador = '/';
+        }
+        else
+        {
+            throw new InvalidOperationException("Operador no soportado.");
+        }
+
+        // Dividir la expresión en operandos
+        string[] partes = cadenaMate.Split(new char[] { operador });
+
+        // Asegurarse de que la expresión tiene dos partes (dos operandos)
+        if (partes.Length != 2)
+        {
+            throw new InvalidOperationException("Expresión inválida.");
+        }
+
+        // Convertir los operandos a números
+        double resultado;
+        if (!double.TryParse(partes[0], out num1) || !double.TryParse(partes[1], out num2))
+        {
+            throw new InvalidOperationException("Operandos no válidos.");
+        }
+
+        // Evaluar la expresión según el operador
+        switch (operador)
+        {
+            case '+':
+                resultado = num1 + num2;
+                Console.WriteLine("El resultado es: "+resultado);
+                break;
+            case '-':
+                resultado = num1 - num2;
+                Console.WriteLine("El resultado es: "+resultado);
+                break;
+            case '*':
+                resultado = num1 * num2;
+                Console.WriteLine("El resultado es: "+resultado);
+                break;
+            case '/':
+                if (num2 == 0)
+                {
+                    throw new DivideByZeroException("División por cero.");
+                }
+                resultado = num1 / num2;
+                Console.WriteLine("El resultado es: "+resultado);
+                break;
+            default:
+                throw new InvalidOperationException("Operador no soportado.");
+        }
 
